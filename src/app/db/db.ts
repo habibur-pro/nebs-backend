@@ -8,7 +8,7 @@ export const initiateSuperAdmin = async () => {
     lastName: "Application",
     email: "admin@gmail.com" as string,
     phone: "1234567890" as string,
-    role: UserRole.ADMIN,
+    role: UserRole.Admin,
     password: await bcrypt.hash("12345678", 10),
   };
 

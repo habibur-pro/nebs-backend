@@ -38,7 +38,7 @@ const auth = (...roles: string[]) => {
 
       const userStatus = user?.status;
 
-      if (userStatus === "BLOCKED") {
+      if (userStatus === "Blocked") {
         throw new ApiError(httpStatus.FORBIDDEN, "This user is blocked ! !");
       }
 

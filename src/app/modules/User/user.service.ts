@@ -50,7 +50,7 @@ const blockUser = async (id: string) => {
 
   // Determine the new status
   const newStatus =
-    user.status === UserStatus.BLOCKED ? UserStatus.ACTIVE : UserStatus.BLOCKED;
+    user.status === UserStatus.Blocked ? UserStatus.Active : UserStatus.Blocked;
 
   const result = await prisma.user.update({
     where: { id },
@@ -60,7 +60,7 @@ const blockUser = async (id: string) => {
   return {
     data: result,
     message:
-      newStatus === UserStatus.BLOCKED
+      newStatus === UserStatus.Blocked
         ? "User blocked successfully"
         : "User unblocked successfully",
   };

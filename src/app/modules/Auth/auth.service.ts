@@ -22,7 +22,7 @@ const loginUser = async (payload: { email: string; password: string }) => {
     throw new Error("User not found");
   }
 
-  if (userData.status === UserStatus.BLOCKED) {
+  if (userData.status === UserStatus.Blocked) {
     throw new Error("Your account is blocked.");
   }
 

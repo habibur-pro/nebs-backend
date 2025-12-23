@@ -24,12 +24,12 @@ router.patch(
 );
 
 // block user
-router.post("/:id", auth(UserRole.ADMIN), UserController.blockUser);
+router.post("/:id", auth(UserRole.Admin), UserController.blockUser);
 
 // delete user
-router.delete("/:id", auth(UserRole.ADMIN), UserController.deleteUser);
+router.delete("/:id", auth(UserRole.Admin), UserController.deleteUser);
 
 // get all user
-router.get("/", auth(UserRole.ADMIN), UserController.getAllUsers);
+router.get("/", auth(UserRole.Admin), UserController.getAllUsers);
 
 export const UserRoutes = router;
